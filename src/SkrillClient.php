@@ -3,7 +3,7 @@ namespace Skrill\Quick;
 
 class SkrillClient
 {
-    const APP_URL = 'https://www.skrill.com/app/payment.pl';
+    const APP_URL = 'https://pay.skrill.com/';
 
     /** @var  SkrillRequest $request */
     private $request;
@@ -41,7 +41,7 @@ class SkrillClient
         if (!$this->sid) {
             $this->sid = $this->generateSID();
         }
-        return "https://www.skrill.com/app/payment.pl?sid={$this->sid}";
+        return "https://pay.skrill.com/?sid={$this->sid}";
     }
 
     /**
